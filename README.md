@@ -1,5 +1,7 @@
 # I create three containers and built automation with ansible 
 
+![](/images/Graph.png)
+
 ## Table of Contents
 
 1. [Create containers](#1-i-created-three-containers-in-docker)
