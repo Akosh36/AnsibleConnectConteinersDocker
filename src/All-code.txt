@@ -1,0 +1,13 @@
+docker run -d --name server1 -v /var/run/docker.sock:/var/run/docker.sock nginx:alpine
+docker run -d --name server2 nginx:alpine
+docker run -d --name server3 nginx:alpine
+
+
+docker network create company
+
+docker network connect company server1
+docker network connect company server2
+docker network connect company server3
+
+docker network inspect bridge --format '{{range .Containers}}{{.Name}} - {{.IPv4Address}}{{println}}{{end}}'
+
